@@ -933,12 +933,12 @@ footer .info-box div {
 }
 @media all and (max-width: 1024px) {
   .news-body .main-box {
-    width: 90%;
+    width: 87%;
     border-top: 1px solid white;
     margin: 0 auto;
     margin-top: -10vw;
     padding-top: 6vw;
-    padding-left: 2vw;
+    padding-left: 0vw;
   }
 }
 .news-body .main-box .item-box {
