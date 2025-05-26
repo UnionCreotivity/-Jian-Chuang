@@ -1,0 +1,135 @@
+.header-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2.3vw 2.3vw;
+  z-index: 99;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  @media all and (max-width: 1024px) {
+    padding: 3vw 4vw;
+    padding-left: 5vw;
+  }
+
+  .logo-box {
+    @media all and (max-width: 1024px) {
+      align-self: center;
+    }
+
+    img {
+      width: 10vw;
+      @media all and (max-width: 1024px) {
+        width: 25vw;
+      }
+      @media all and (max-width: 500px) {
+        width: 40vw;
+      }
+    }
+  }
+
+  .link-box {
+    display: flex;
+
+    @media all and (max-width: 1024px) {
+      justify-content: center;
+    }
+    a {
+      font-family: "Noto Sans TC", sans-serif;
+      color: white;
+      font-size: 1.2vw;
+      margin-right: 2vw;
+      letter-spacing: 0.08em;
+      align-self: center;
+      transition: 0.4s ease-in-out;
+      @media all and (max-width: 1024px) {
+        font-size: 5vw;
+        padding: 4vw 6vw;
+        margin-right: 0vw;
+        margin-bottom: 10vw;
+        letter-spacing: 0.2em;
+      }
+      &:hover {
+        color: rgb(136, 136, 136);
+      }
+      &:last-child {
+        margin-right: 0vw;
+      }
+    }
+  }
+
+  .link-box.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  // .link-box {
+  //   display: flex;
+  //   gap: 1rem;
+  // }
+
+  /* Hamburger button 在桌機隱藏 */
+  .hamburger {
+    display: none;
+    padding-right: 1.5vw;
+  }
+
+  /* 手機版樣式 */
+  @media (max-width: 1024px) {
+    .hamburger {
+      display: block;
+      z-index: 1001;
+    }
+
+    .link-box {
+      // display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      background-color: black;
+      width: 100vw;
+      padding: 1rem;
+      height: 100svh;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      color: white;
+      opacity: 0;
+      transform: translateY(-10vw);
+      pointer-events: none;
+      transition: all 0.5s ease;
+    }
+
+    .link-box.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+
+  .hamburger .hamburger-inner,
+  .hamburger .hamburger-inner::before,
+  .hamburger .hamburger-inner::after {
+    background-color: white;
+  }
+
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner:after,
+  .hamburger.is-active .hamburger-inner:before {
+    background-color: white;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner:after,
+  .hamburger-inner:before {
+    @media all and (max-width: 1024px) {
+      width: 53px;
+      height: 4px;
+    }
+
+    @media all and (max-width: 500px) {
+      width: 40px;
+      height: 4px;
+    }
+  }
+}

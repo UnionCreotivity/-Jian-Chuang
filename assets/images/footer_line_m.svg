@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 699.84 11.08">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="_創見集" data-name="創見集">
+    <g>
+      <line class="cls-2" y1="5.54" x2="334.54" y2="5.54"/>
+      <line class="cls-2" x1="365.31" y1="5.54" x2="699.84" y2="5.54"/>
+      <circle class="cls-1" cx="349.92" cy="5.54" r="5.29"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+@mixin content() {
+  font-family: "Noto Sans TC Light";
+  line-height: 1.7;
+  letter-spacing: 0.15em;
+  font-size: $font-18;
+  color: white;
+  font-weight: 400;
+  @media all and (max-width: 1024px) {
+    font-size: $font-mobile-30;
+  }
+}
+
+@mixin local() {
+  font-family: "Noto Sans TC Light";
+  line-height: 1.7;
+  letter-spacing: 0.15em;
+  font-size: $font-20;
+  color: white;
+  font-weight: 400;
+  @media all and (max-width: 1024px) {
+    font-size: $font-mobile-30;
+  }
+}

@@ -1,0 +1,128 @@
+.news-body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+
+  footer {
+    margin-top: 0vw;
+    @media all and (max-width: 1024px) {
+      margin-top: 4vw;
+    }
+  }
+
+  .news-title {
+    width: 21vw;
+    margin-top: 7vw;
+    margin-left: 3vw;
+
+    @media all and (max-width: 1024px) {
+      width: 42vw;
+      margin-top: 27vw;
+      margin-left: 7vw;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    video {
+      width: 21vw;
+      -webkit-mask-image: url(../images/n_title.png);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: 100%;
+      mask-image: url(../images/n_title.png);
+      mask-repeat: no-repeat;
+      mask-size: 100%;
+      @media all and (max-width: 1024px) {
+        width: 46vw;
+      }
+    }
+  }
+
+  .main-box {
+    display: flex;
+    margin-top: -6vw;
+    flex-direction: column;
+    overflow: hidden;
+    @media all and (max-width: 1024px) {
+      width: 90%;
+      border-top: 1px solid white;
+      margin: 0 auto;
+      margin-top: -10vw;
+      padding-top: 6vw;
+      padding-left: 2vw;
+    }
+    .item-box {
+      display: flex;
+      margin-bottom: 6vw;
+      @media all and (max-width: 1024px) {
+        flex-direction: column;
+        margin-bottom: 11vw;
+      }
+      &:last-child {
+        @media all and (max-width: 1024px) {
+          margin-bottom: 4vw;
+        }
+      }
+      .left {
+        display: flex;
+        width: 25%;
+        padding-left: 3.5vw;
+        flex-direction: column;
+        justify-content: end;
+        @media all and (max-width: 1024px) {
+          width: 100%;
+          padding-left: 0vw;
+          margin-bottom: 5vw;
+        }
+        .name {
+          width: 9vw;
+          margin-bottom: 1vw;
+          @media all and (max-width: 1024px) {
+            width: 18vw;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .local {
+          @include local();
+        }
+      }
+      .right {
+        display: flex;
+        width: 68%;
+        justify-content: space-between;
+        margin-left: 4vw;
+        overflow: hidden;
+
+        @media all and (max-width: 1024px) {
+          width: 100%;
+          margin-left: 0vw;
+        }
+        .img-box {
+          overflow: hidden;
+          margin-right: 1vw;
+          @media all and (max-width: 1024px) {
+            display: contents;
+          }
+          &:last-child {
+            margin-right: 0vw;
+            @media all and (max-width: 1024px) {
+              margin-right: 0vw;
+            }
+          }
+          img {
+            width: auto;
+            height: 37vw;
+            display: block;
+            @media all and (max-width: 1024px) {
+              height: 46vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

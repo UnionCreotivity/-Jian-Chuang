@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>創品集</title>
+    <link rel="icon" href="../assets/images/ico.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+TC:wght@400;500;600;700&family=Junge:wght@400&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" />
+
+</head>
+
+<body class="project-body">
+
+    <header class="header-box">
+        <a class="logo-box" href="index.html">
+            <img src="../assets/images/logo.svg" alt="logo" />
+        </a>
+
+        <!-- Hamburger button -->
+        <button class="hamburger hamburger--slider" type="button" id="menu-toggle">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        <!-- 導覽選單 -->
+        <div class="link-box" id="menu">
+            <a href="about.html">創立誌</a>
+            <a href="project.html">創品集</a>
+            <a href="news.html">創話題</a>
+            <a href="marketing.html">行銷館</a>
+        </div>
+    </header>
+
+    <div class="bg-box">
+        <picture>
+            <source srcset="../assets/images/about_bg_m.webp" media="(max-width: 1024px)">
+            <img class="bg" src="../assets/images/about_bg.webp" alt="about_bg" srcset="">">
+        </picture>
+    </div>
+
+    <div class="main-box" id="tab-block">
+
+        <div class="left-fixed">
+            <div class="title">
+                <div class="pt pt1">
+                    <video loop autoplay muted playsinline src="../assets/images/water03.mp4"></video>
+                </div>
+                <div class="pt pt2">
+                    <video loop autoplay muted playsinline src="../assets/images/water03.mp4"></video>
+                </div>
+            </div>
+            <div class="long-line">
+                <img src="../assets/images/long_line.png" alt="long_line" srcset="">
+            </div>
+            <div class="menu-box">
+                <div class="p-menu" data-index="0">最新作品</div>
+                <img src="../assets/images/link_line.png" alt="link_line" srcset="">
+                <div class="p-menu" data-index="1">熱銷作品</div>
+            </div>
+        </div>
+
+        <!-- 最新作品 -->
+        <div class="box tab-cont">
+            <div class="project-item-box latest-projects tab-pane">
+                <a class="project-item" href="project_content.html">
+                    <div class="img-box">
+                        <img src="../assets/images/p1.webp" alt="p1" srcset="">
+                    </div>
+                    <div class="content-box">
+                        <div class="name">立彩建設</div>
+                        <div class="local">大里區</div>
+                        <div class="price">20億</div>
+                    </div>
+                </a>
+                <a class="project-item" href="project_content.html">
+                    <div class="img-box">
+                        <img src="../assets/images/p2.webp" alt="p2" srcset="">
+                    </div>
+                    <div class="content-box">
+                        <div class="name">茂居建設</div>
+                        <div class="local">南屯區</div>
+                        <div class="price">20億</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 熱銷作品 -->
+            <div class="project-item-box popular-projects tab-pane">
+                <a class="project-item" href="project_content.html">
+                    <div class="img-box">
+                        <img src="../assets/images/p3.webp" alt="p3" srcset="">
+                    </div>
+                    <div class="content-box">
+                        <div class="name">精銳建設</div>
+                        <div class="local">北屯區</div>
+                        <div class="price">35億</div>
+                    </div>
+                </a>
+                <a class="project-item" href="project_content.html">
+                    <div class="img-box">
+                        <img src="../assets/images/p4.webp" alt="p4" srcset="">
+                    </div>
+                    <div class="content-box">
+                        <div class="name">大鑫開發建設</div>
+                        <div class="local">北屯區</div>
+                        <div class="price">15億</div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <picture>
+            <source srcset="../assets/images/footer_line_m.svg" media="(max-width: 1024px)">
+            <img src="../assets/images/footer_line.svg" alt="footer_line" srcset="">
+        </picture>
+        <div class="name">簡創企業｜凱爾行銷</div>
+        <div class="info-box">
+            <div>簡創企業有限公司 統編｜00135600</div>
+            <div>凱爾企業有限公司 統編｜90650911</div>
+            <div>台中市南屯區文心南七路99號</div>
+            <div class="pc">No. 99, Wenxin S. 7th Rd., Nantun Dist., Taichung City<br>
+                408025, Taiwan</div>
+            <div class="mobile">No. 99, Wenxin S. 7th Rd., Nantun Dist., Taichung City
+                408025, Taiwan</div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="../assets/minified/gsap.min.js"></script>
+    <script src="../assets/minified/ScrollTrigger.min.js"></script>
+    <script src="../assets/minified/ScrollToPlugin.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="../js/project.js"></script>
+</body>
+
+</html>
