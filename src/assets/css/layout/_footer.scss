@@ -56,6 +56,9 @@ footer {
     div {
       margin-bottom: 0.3vw;
       line-height: 1.6;
+      @media all and (max-width: 1024px) {
+        margin-bottom: 1vw;
+      }
     }
     .pc {
       @media all and (max-width: 1024px) {

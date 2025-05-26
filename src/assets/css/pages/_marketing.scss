@@ -180,6 +180,9 @@
       display: flex;
       margin-bottom: 6vw;
       overflow: hidden;
+      @media all and (max-width: 1024px) {
+        margin-bottom: 15vw;
+      }
       &:last-child {
         margin-bottom: 0vw;
       }
