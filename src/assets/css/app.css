@@ -487,6 +487,11 @@ footer .info-box div {
   margin-bottom: 0.5vw;
   font-family: "Noto Sans TC", sans-serif;
 }
+@media all and (max-width: 1440px) {
+  .about-body .main-box .content-box .title {
+    margin-bottom: 0.85vw;
+  }
+}
 @media all and (max-width: 1024px) {
   .about-body .main-box .content-box .title {
     font-size: 4.3vw;
