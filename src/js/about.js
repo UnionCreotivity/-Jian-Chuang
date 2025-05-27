@@ -1,5 +1,23 @@
+const loadingScreen = document.querySelector(".loading-screen");
+const loadingText = document.getElementById("loading-text");
+let percent = 1;
+
+function updateProgress() {
+    loadingText.textContent = percent + "%";
+    percent++;
+    if (percent <= 99) {
+        setTimeout(updateProgress, 8);
+    }
+}
+updateProgress();
+
 window.onload = function () {
     const window_width = window.screen.width;
+
+    //loading消失動態
+    let tl = gsap.timeline({});
+    tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
+        .to(loadingScreen, { duration: 0.7, display: 'none', })
 
     // 設定視窗高度變數
     const updateVH = () => {
@@ -64,16 +82,8 @@ window.onload = function () {
         } else {
             const tl = gsap.timeline({})
 
-            tl.fromTo('.big-title', {
-                opacity: 0,
-                y: '5vw',
-            }, {
-                duration: 1.5,
-                scale: 1,
-                y: '0vw',
-                opacity: 1,
-            })
-                .fromTo('.main-box .content-box div', {
+            tl
+                .fromTo('.big-title,.main-box .content-box div', {
                     opacity: 0,
                     y: '5vw',
                 }, {
@@ -83,7 +93,7 @@ window.onload = function () {
                     opacity: 1,
                     ease: 'power1.inOut',
                     stagger: 0.2
-                }, '<0.55')
+                })
                 .fromTo('.about-body .main-box .founder img', {
                     opacity: 0,
                     y: '5vw',

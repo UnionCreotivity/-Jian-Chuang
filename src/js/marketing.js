@@ -1,3 +1,16 @@
+const loadingScreen = document.querySelector(".loading-screen");
+const loadingText = document.getElementById("loading-text");
+let percent = 1;
+
+function updateProgress() {
+    loadingText.textContent = percent + "%";
+    percent++;
+    if (percent <= 99) {
+        setTimeout(updateProgress, 8);
+    }
+}
+updateProgress();
+
 window.onload = function () {
     const window_width = window.screen.width;
 
@@ -7,6 +20,11 @@ window.onload = function () {
     };
     updateVH();
     window.addEventListener("resize", updateVH);
+
+    //loading消失動態
+    let tl = gsap.timeline({});
+    tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
+        .to(loadingScreen, { duration: 0.7, display: 'none', })
 
     const menus = document.querySelectorAll(".tab");
     const projectBoxes = document.querySelectorAll(".main-box");

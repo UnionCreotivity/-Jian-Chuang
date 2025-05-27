@@ -12,6 +12,55 @@ body {
   background-color: black;
 }
 
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999999;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+@media all and (max-width: 500px) {
+  .loading-screen {
+    height: calc(var(--loadingvh, 1vh) * 99);
+  }
+}
+.loading-screen .loading-text {
+  display: flex;
+  justify-content: center;
+  font-family: "Noto Serif TC";
+  align-items: center;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 1vw;
+  font-style: italic;
+  padding-left: 0vw;
+  color: #ffffff;
+  margin-top: 0.5vw;
+}
+@media all and (max-width: 1440px) {
+  .loading-screen .loading-text {
+    font-size: 1.1vw;
+  }
+}
+@media all and (max-width: 1024px) {
+  .loading-screen .loading-text {
+    font-size: 3.2vw;
+  }
+}
+@media all and (max-width: 500px) {
+  .loading-screen .loading-text {
+    font-size: 5vw;
+    margin-bottom: 15vw;
+  }
+}
+
 .header-box {
   display: flex;
   width: 100%;

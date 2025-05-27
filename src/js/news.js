@@ -1,6 +1,19 @@
+const loadingScreen = document.querySelector(".loading-screen");
+const loadingText = document.getElementById("loading-text");
+let percent = 1;
+
+function updateProgress() {
+    loadingText.textContent = percent + "%";
+    percent++;
+    if (percent <= 99) {
+        setTimeout(updateProgress, 8);
+    }
+}
+updateProgress();
+
 window.onload = function () {
     const window_width = window.screen.width;
-    gsap.registerPlugin();
+
     gsap.registerPlugin(ScrollTrigger);
     // 設定視窗高度變數
     const updateVH = () => {
@@ -8,6 +21,11 @@ window.onload = function () {
     };
     updateVH();
     window.addEventListener("resize", updateVH);
+
+    //loading消失動態
+    let tl = gsap.timeline({});
+    tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
+        .to(loadingScreen, { duration: 0.7, display: 'none', })
 
     // 手機板menu
     if (window_width <= 1024) {
@@ -24,7 +42,7 @@ window.onload = function () {
         const itemBox = document.querySelectorAll('.main-box .item-box')
 
         itemBox.forEach((item) => {
-            console.log(item)
+
             const title = item.querySelector('.left');
             const img = item.querySelector('.right');
 

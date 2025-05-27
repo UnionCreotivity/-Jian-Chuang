@@ -1,5 +1,23 @@
+const loadingScreen = document.querySelector(".loading-screen");
+const loadingText = document.getElementById("loading-text");
+let percent = 1;
+
+function updateProgress() {
+    loadingText.textContent = percent + "%";
+    percent++;
+    if (percent <= 99) {
+        setTimeout(updateProgress, 8);
+    }
+}
+updateProgress();
+
 window.onload = function () {
     const window_width = window.screen.width;
+
+    //loading消失動態
+    let tl = gsap.timeline({});
+    tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
+        .to(loadingScreen, { duration: 0.7, display: 'none', })
 
     // 手機板menu
     if (window_width <= 1024) {
@@ -88,11 +106,14 @@ window.onload = function () {
     bgAni();
 
     const menuLine = () => {
-        const tl = gsap.timeline({
-            delay: 0.5
-        })
+        if (window_width > 1024) {
+            const tl = gsap.timeline({
+                delay: 0.5
+            })
 
-        tl.from('.main-box .left-fixed .long-line img', { duration: 1.3, height: '0%' })
+            tl.from('.main-box .left-fixed .long-line img', { duration: 1.3, height: '0%' })
+        }
+
     }
     menuLine();
 
