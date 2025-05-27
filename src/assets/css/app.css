@@ -245,7 +245,7 @@ footer .info-box {
   flex-direction: column;
   font-size: 0.9vw;
   padding-left: 2vw;
-  font-family: "Noto Sans TC Light";
+  font-family: "Noto Sans TC";
 }
 @media all and (max-width: 1024px) {
   footer .info-box {
@@ -883,7 +883,7 @@ footer .info-box div {
 }
 .project-content-body .main-box .left-info .p-content-box .info-box .info {
   display: flex;
-  font-family: "Noto Sans TC Light";
+  font-family: "Noto Sans TC";
   font-size: 0.9vw;
   letter-spacing: 0.1em;
   margin-bottom: 0.5vw;
