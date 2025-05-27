@@ -6,7 +6,7 @@ function updateProgress() {
     loadingText.textContent = percent + "%";
     percent++;
     if (percent <= 99) {
-        setTimeout(updateProgress, 8);
+        setTimeout(updateProgress, 7);
     }
 }
 updateProgress();
@@ -16,8 +16,8 @@ window.onload = function () {
 
     //loading消失動態
     let tl = gsap.timeline({});
-    tl.to(loadingScreen, { duration: 1, opacity: 0, ease: "power1.inOut" })
-        .to(loadingScreen, { duration: 0.7, display: 'none', })
+    tl.to(loadingScreen, { duration: 1, opacity: 0 })
+        .to(loadingScreen, { duration: 0.6, display: 'none', })
 
     // 設定視窗高度變數
     const updateVH = () => {
@@ -54,8 +54,7 @@ window.onload = function () {
                 opacity: 0,
                 y: '10vw',
             }, {
-                duration: 1.5,
-                scale: 1,
+                duration: 1.3,
                 y: '0vw',
                 opacity: 1,
             })
@@ -67,9 +66,9 @@ window.onload = function () {
                     scale: 1,
                     y: '0vw',
                     opacity: 1,
-                    ease: 'power1.inOut',
-                    stagger: 0.2
-                }, '<0.55')
+
+                    stagger: 0.23
+                }, '<0.5')
                 .fromTo('.about-body .main-box .founder img', {
                     opacity: 0,
                     y: '5vw',
@@ -80,20 +79,27 @@ window.onload = function () {
                     opacity: 1,
                 }, '<1.5')
         } else {
-            const tl = gsap.timeline({})
+            const tl = gsap.timeline({
+                delay: 0.3
+            })
 
-            tl
-                .fromTo('.big-title,.main-box .content-box div', {
+            tl.fromTo('.big-title', {
+                opacity: 0,
+                y: '5vw',
+            }, {
+                duration: 1.3,
+                y: '0vw',
+                opacity: 1,
+            })
+                .fromTo('.main-box .content-box div', {
                     opacity: 0,
                     y: '5vw',
                 }, {
                     duration: 1,
-                    scale: 1,
                     y: '0vw',
                     opacity: 1,
-                    ease: 'power1.inOut',
-                    stagger: 0.2
-                })
+                    stagger: 0.23
+                }, '<0.5')
                 .fromTo('.about-body .main-box .founder img', {
                     opacity: 0,
                     y: '5vw',
