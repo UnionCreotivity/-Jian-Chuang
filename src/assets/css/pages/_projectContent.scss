@@ -37,7 +37,7 @@
       //   }
       //   .name {
       //     font-size: 1.5vw;
-      //     font-family: "Noto Sans TC";
+      //     font-family: "Noto Sans TC", sans-serif;
       //     letter-spacing: 0.08em;
       //     margin-bottom: 0.3vw;
       //   }
@@ -69,7 +69,7 @@
 
           .name {
             font-size: 1.5vw;
-            font-family: "Noto Sans TC";
+            font-family: "Noto Sans TC", sans-serif;
             letter-spacing: 0.08em;
             margin-bottom: 0.3vw;
             @media all and (max-width: 1024px) {
@@ -80,7 +80,7 @@
 
           .local {
             @include content();
-            font-family: "Noto Sans TC";
+            font-family: "Noto Sans TC", sans-serif;
           }
         }
 
@@ -90,7 +90,7 @@
 
           .info {
             display: flex;
-            font-family: "Noto Sans TC";
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 0.9vw;
             letter-spacing: 0.1em;
             margin-bottom: 0.5vw;
