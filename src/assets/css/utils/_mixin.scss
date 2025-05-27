@@ -1,5 +1,5 @@
 @mixin content() {
-  font-family: "Noto Sans TC Light";
+  font-family: "Noto Sans TC";
   line-height: 1.7;
   letter-spacing: 0.15em;
   font-size: $font-18;
@@ -11,7 +11,7 @@
 }
 
 @mixin local() {
-  font-family: "Noto Sans TC Light";
+  font-family: "Noto Sans TC";
   line-height: 1.7;
   letter-spacing: 0.15em;
   font-size: $font-20;

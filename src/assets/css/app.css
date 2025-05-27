@@ -494,7 +494,7 @@ footer .info-box div {
   }
 }
 .about-body .main-box .content-box .content {
-  font-family: "Noto Sans TC Light";
+  font-family: "Noto Sans TC";
   line-height: 1.7;
   letter-spacing: 0.15em;
   font-size: 0.95vw;
@@ -735,7 +735,7 @@ footer .info-box div {
   display: flex;
   position: relative;
   justify-content: center;
-  font-family: "Noto Sans TC Light";
+  font-family: "Noto Sans TC";
   line-height: 1.7;
   letter-spacing: 0.15em;
   font-size: 0.95vw;
@@ -864,7 +864,7 @@ footer .info-box div {
   }
 }
 .project-content-body .main-box .left-info .p-content-box .name-box .local {
-  font-family: "Noto Sans TC Light";
+  font-family: "Noto Sans TC";
   line-height: 1.7;
   letter-spacing: 0.15em;
   font-size: 0.95vw;
@@ -1041,7 +1041,7 @@ footer .info-box div {
   width: 100%;
 }
 .news-body .main-box .item-box .left .local {
-  font-family: "Noto Sans TC Light";
+  font-family: "Noto Sans TC";
   line-height: 1.7;
   letter-spacing: 0.15em;
   font-size: 1.1vw;
@@ -1284,7 +1284,7 @@ footer .info-box div {
   width: 100%;
 }
 .marketing-body .main-box .item-box .left .local {
-  font-family: "Noto Sans TC Light";
+  font-family: "Noto Sans TC";
   line-height: 1.7;
   letter-spacing: 0.15em;
   font-size: 1.1vw;
