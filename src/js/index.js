@@ -6,7 +6,7 @@ function updateProgress() {
     loadingText.textContent = percent + "%";
     percent++;
     if (percent <= 99) {
-        setTimeout(updateProgress, 8);
+        setTimeout(updateProgress, 6);
     }
 }
 updateProgress();

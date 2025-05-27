@@ -6,7 +6,7 @@ function updateProgress() {
     loadingText.textContent = percent + "%";
     percent++;
     if (percent <= 99) {
-        setTimeout(updateProgress, 7);
+        setTimeout(updateProgress, 6);
     }
 }
 updateProgress();
@@ -52,9 +52,9 @@ window.onload = function () {
 
             tl.fromTo('.big-title', {
                 opacity: 0,
-                y: '10vw',
+                y: 'vw',
             }, {
-                duration: 1.3,
+                duration: 1,
                 y: '0vw',
                 opacity: 1,
             })
