@@ -14,10 +14,19 @@ updateProgress();
 window.onload = function () {
     const window_width = window.screen.width;
 
+
+    const loadingAni = () => {
+        let tl = gsap.timeline({});
+        tl.to(loadingScreen, { duration: 1, opacity: 0 })
+            .to(loadingScreen, { duration: 0.6, display: 'none', })
+
+
+    }
+    loadingAni();
+
+
     //loading消失動態
-    let tl = gsap.timeline({});
-    tl.to(loadingScreen, { duration: 1, opacity: 0 })
-        .to(loadingScreen, { duration: 0.6, display: 'none', })
+
 
     // 設定視窗高度變數
     const updateVH = () => {
@@ -37,27 +46,18 @@ window.onload = function () {
         });
     }
 
-    const bgAni = () => {
-        const tl = gsap.timeline({
-            delay: 0.5
-        })
-        tl.from('.bg-box img', { duration: 1.5, opacity: 0, scale: 1.4 })
-    }
-    bgAni();
-
-    const textAni = () => {
-
+    const ani = () => {
         if (window_width <= 1024) {
             const tl = gsap.timeline({})
-
-            tl.fromTo('.big-title', {
-                opacity: 0,
-                y: 'vw',
-            }, {
-                duration: 1,
-                y: '0vw',
-                opacity: 1,
-            })
+            tl.from('.bg-box img', { duration: 1.5, opacity: 0, scale: 1.4 })
+                .fromTo('.big-title', {
+                    opacity: 0,
+                    y: '5vw',
+                }, {
+                    duration: 1,
+                    y: '0vw',
+                    opacity: 1,
+                }, '<0.4')
                 .fromTo('.main-box .content-box div', {
                     opacity: 0,
                     y: '10vw',
@@ -78,19 +78,18 @@ window.onload = function () {
                     y: '0vw',
                     opacity: 1,
                 }, '<1.5')
-        } else {
-            const tl = gsap.timeline({
-                delay: 0.3
-            })
-
-            tl.fromTo('.big-title', {
-                opacity: 0,
-                y: '5vw',
-            }, {
-                duration: 1.3,
-                y: '0vw',
-                opacity: 1,
-            })
+        }
+        else {
+            const tl = gsap.timeline({})
+            tl.from('.bg-box img', { duration: 1.5, opacity: 0, scale: 1.4 })
+                .fromTo('.big-title', {
+                    opacity: 0,
+                    y: '5vw',
+                }, {
+                    duration: 1.3,
+                    y: '0vw',
+                    opacity: 1,
+                }, '<0.4')
                 .fromTo('.main-box .content-box div', {
                     opacity: 0,
                     y: '5vw',
@@ -112,7 +111,7 @@ window.onload = function () {
         }
 
     }
-    textAni();
+    ani();
 
 
 
