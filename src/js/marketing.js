@@ -49,7 +49,6 @@ window.onload = function () {
                 duration: 0.5,
                 autoAlpha: 1,
                 display: "flex",
-
             });
         }
 
@@ -78,7 +77,6 @@ window.onload = function () {
             menus.forEach((menu, i) => {
                 const originTab = menu.querySelector('.origin-tab');
                 const activeTab = menu.querySelector('.active-tab');
-
                 const isActive = i === index;
 
                 // 切換 tab 樣式
@@ -90,7 +88,6 @@ window.onload = function () {
             });
         }
         projectBoxes.forEach(box => gsap.set(box, { autoAlpha: 0, display: "none" }));
-
         activateIndex(0);
 
         menus.forEach((menu, index) => {
@@ -110,7 +107,6 @@ window.onload = function () {
                 duration: 1,
                 autoAlpha: 1,
                 display: "flex",
-                // delay: 0.4,
                 ease: "power0.inOut",
             });
         }
@@ -125,8 +121,6 @@ window.onload = function () {
         }
 
         function activateIndex(index) {
-
-
             ptImages.forEach((img, i) => {
                 if (i === index) {
                     show(img);
@@ -139,6 +133,7 @@ window.onload = function () {
                 menu.classList.toggle("active", i === index);
             });
         }
+
         ptImages.forEach(img => gsap.set(img, { autoAlpha: 0, display: "none" }));
         activateIndex(0);
 
@@ -149,7 +144,6 @@ window.onload = function () {
         });
 
         const tabWrapper = $('#tab-block'),
-
             tabContent = tabWrapper.find('.tab-pane');
         const tabMnu = $('.p-menu');
 
@@ -164,15 +158,10 @@ window.onload = function () {
 
         tabMnu.click(function () {
             const tabData = $(this).data('tab');
-
             tabWrapper.find(tabContent).hide();
             tabWrapper.find(tabContent).filter('[data-tab=' + tabData + ']').show();
-
         });
     }
-
-
-
 
     const itemAni = () => {
         if (window_width <= 1024) {
@@ -189,7 +178,6 @@ window.onload = function () {
                         start: "top center",
                     },
                 });
-
 
                 tl.from(title, {
                     duration: 0.9,
@@ -218,7 +206,6 @@ window.onload = function () {
                     },
                 });
 
-
                 tl.from(title, {
                     duration: 0.9,
                     opacity: 0,
@@ -230,12 +217,8 @@ window.onload = function () {
                         x: '18vw',
                     }, '<0.3')
             })
-
         }
-
     }
-
-
     itemAni();
 
 };

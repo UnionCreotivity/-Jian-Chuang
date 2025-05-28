@@ -20,7 +20,6 @@
   .main-box {
     display: flex;
     width: 100%;
-    // justify-content: right;
     position: relative;
     z-index: 20;
     padding-top: 6vw;
@@ -233,9 +232,5 @@
     opacity: 1;
     visibility: visible;
     position: relative;
-  }
-
-  footer {
-    // padding-top: 0vw;
   }
 }

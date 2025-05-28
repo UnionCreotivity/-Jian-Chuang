@@ -38,7 +38,6 @@ window.onload = function () {
             duration: 1,
             autoAlpha: 1,
             display: "flex",
-            // delay: 0.4,
             ease: "power0.inOut",
         });
     }
@@ -54,7 +53,6 @@ window.onload = function () {
 
     function activateIndex(index) {
 
-
         ptImages.forEach((img, i) => {
             if (i === index) {
                 show(img);
@@ -67,6 +65,7 @@ window.onload = function () {
             menu.classList.toggle("active", i === index);
         });
     }
+
     ptImages.forEach(img => gsap.set(img, { autoAlpha: 0, display: "none" }));
     activateIndex(0);
 
@@ -95,7 +94,6 @@ window.onload = function () {
         tabWrapper.find(tabContent).filter('[data-tab=' + tabData + ']').show();
     });
 
-
     const bgAni = () => {
         const tl = gsap.timeline({
             delay: 0.5
@@ -110,10 +108,8 @@ window.onload = function () {
             const tl = gsap.timeline({
                 delay: 0.5
             })
-
             tl.from('.main-box .left-fixed .long-line img', { duration: 1.3, height: '0%' })
         }
-
     }
     menuLine();
 

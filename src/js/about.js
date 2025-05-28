@@ -14,19 +14,13 @@ updateProgress();
 window.onload = function () {
     const window_width = window.screen.width;
 
-
+    //loading消失動態
     const loadingAni = () => {
         let tl = gsap.timeline({});
         tl.to(loadingScreen, { duration: 1, opacity: 0 })
             .to(loadingScreen, { duration: 0.6, display: 'none', })
-
-
     }
     loadingAni();
-
-
-    //loading消失動態
-
 
     // 設定視窗高度變數
     const updateVH = () => {
@@ -66,7 +60,6 @@ window.onload = function () {
                     scale: 1,
                     y: '0vw',
                     opacity: 1,
-
                     stagger: 0.23
                 }, '<0.5')
                 .fromTo('.about-body .main-box .founder img', {
@@ -109,10 +102,7 @@ window.onload = function () {
                     opacity: 1,
                 }, '<1.5')
         }
-
     }
     ani();
-
-
 
 };

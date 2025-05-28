@@ -13,8 +13,8 @@ updateProgress();
 
 window.onload = function () {
     const window_width = window.screen.width;
-
     gsap.registerPlugin(ScrollTrigger);
+
     // 設定視窗高度變數
     const updateVH = () => {
         document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`);
@@ -53,7 +53,6 @@ window.onload = function () {
                 },
             });
 
-
             tl.from(title, {
                 duration: 0.9,
                 opacity: 0,
@@ -65,7 +64,6 @@ window.onload = function () {
                     x: '18vw',
                 }, '<0.3')
         })
-
     }
     itemAni()
 };

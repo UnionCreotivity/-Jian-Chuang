@@ -22,8 +22,6 @@
     }
 
     .tab1 {
-      .origin-tab {
-      }
       .active-tab {
         position: absolute;
         left: 0px;
@@ -51,26 +49,6 @@
           opacity: 0;
         }
       }
-      // &:hover {
-      //   .origin-tab {
-      //     video {
-      //       display: flex;
-      //       opacity: 1;
-      //       width: 37vw;
-      //       position: absolute;
-      //       left: 0px;
-      //       top: 0px;
-      //       -webkit-mask-repeat: no-repeat;
-      //       -webkit-mask-size: 100%;
-      //       mask-size: 100%;
-      //       mask-repeat: no-repeat;
-      //       -webkit-mask-image: url(../images/m_title2.png);
-      //       mask-image: url(../images/m_title2.png);
-      //     }
-      //   }
-      //   .active-tab {
-      //   }
-      // }
 
       .active-tab {
         position: absolute;
@@ -82,7 +60,6 @@
         mask-repeat: no-repeat;
         -webkit-mask-image: url(../images/m_title2.png);
         mask-image: url(../images/m_title2.png);
-
         video {
           width: 37vw;
         }
@@ -92,7 +69,6 @@
     .line {
       margin-left: 5vw;
       margin-right: 5vw;
-
       img {
         width: 0.11vw;
       }
